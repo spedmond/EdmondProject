@@ -24,13 +24,32 @@ public class Main {
                 guess = input.nextInt();
             }
             pointAdd = 10-guess;
+
             System.out.print("Choose the length of the random number (Min. 2, Max. 7; any length over 3 will increase your score multiplier): ");
-                int length = input.nextInt();
-                while (length<2||length>7) {
-                    System.out.print("Error: Length must be between 2 and 7. Please reenter length: ");
-                    length = input.nextInt();
-                }
-                pointMulti = 1 + Math.abs(1-length);
+            int length = input.nextInt();
+            while (length<2||length>7) {
+                System.out.print("Error: Length must be between 2 and 7. Please reenter length: ");
+                length = input.nextInt();
+            }
+            pointMulti = 1 + Math.abs(1-length);
+            Guess guesser = new Guess(length,pointAdd,pointMulti);
+            System.out.println("----------------------");
+            System.out.println("| HARD MODE SETTINGS |");
+            System.out.println("----------------------");
+            System.out.println("Number length: " + length);
+            System.out.println("Guess amount: " + guess);
+            System.out.println("Point modifier: +" + pointAdd);
+            System.out.println("Point multiplier: x" + pointMulti);
+        }
+        else {
+            Guess guesser = new Guess();
+            System.out.println("----------------------");
+            System.out.println("| EASY MODE SETTINGS |");
+            System.out.println("----------------------");
+            System.out.println("Number length: 1");
+            System.out.println("Guess amount: 10");
+            System.out.println("Point modifier: +0");
+            System.out.println("Point multiplier: x1");
         }
     }
 }
