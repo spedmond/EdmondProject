@@ -51,4 +51,25 @@ public class Guess {
             System.out.println("Point multiplier: x1");
         }
     }
+    public boolean playGame() {
+        for (int guessRound=guess;guessRound>0;guessRound--) {
+            String maxNum = "";
+            for (int i = 1; 1 <= length; i++) {
+                maxNum += 9;
+            }
+            System.out.print("Pick a number between 0 and " + maxNum + "!");
+            int userGuess = input.nextInt();
+            if (userGuess<randomNum) {
+                System.out.println("Too low!");
+            }
+            if (userGuess>randomNum) {
+                System.out.println("Too high!");
+            }
+            else {
+                System.out.print("Good job! You guessed the number in " + Math.abs(guessRound-guess) + " tries!");
+                return true;
+            }
+        }
+        return false;
+    }
 }
