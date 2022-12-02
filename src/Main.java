@@ -12,13 +12,14 @@ public class Main {
         int highestScore;
         int pointAdd;
         int pointMulti;
-        boolean hardMode = false;
+        boolean playAgain = true;
+        boolean isHardMode = false;
 
         System.out.println("Hello, " + name + "!");
         System.out.print("Would you like to play on HARD mode? Type \"Yes\" if so, otherwise press enter: ");
         String diff = input.nextLine();
         if (diff.toLowerCase().equals("yes")) {
-            hardMode = true;
+            isHardMode = true;
             System.out.print("Choose number of guesses (Min. 1, Max. 9; the fewer guesses you have, the more points you'll gain per number guessed correctly): ");
             int guess = input.nextInt();
             while (guess<=0||guess>9) {
@@ -33,12 +34,23 @@ public class Main {
                 length = input.nextInt();
             }
 
-            Guess guesser = new Guess(length,guess);
-            guesser.printSettings(hardMode);
+            Guess game = new Guess(length,guess);
+            game.printSettings(isHardMode);
+            while (playAgain) {
+                game.playGame();
+                playAgain = game.playAgain();
+            }
         }
         else {
-            Guess guesser = new Guess();
-            guesser.printSettings(hardMode);
+            Guess game = new Guess();
+            game.printSettings(isHardMode);
+            game.playGame();
+            game.playAgain();
+            while (playAgain) {
+                game.playGame();
+                game.playAgain();
+                playAgain = game.playAgain();
+            }
         }
     }
 }

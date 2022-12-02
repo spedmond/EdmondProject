@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Guess {
     private int randomNum;
-    private int highScore;
+    private int score = 0;
     private int length;
     private int guess;
     private int pointAdd;
@@ -12,6 +12,10 @@ public class Guess {
 
     public Guess() {
         randomNum = (int)(Math.random()*10);
+        length = 1;
+        guess = 10;
+        pointAdd = 0;
+        pointMulti = 1;
     }
 
     public Guess(int length,int guess) {
@@ -39,7 +43,7 @@ public class Guess {
             System.out.println("Number length: " + length);
             System.out.println("Guess amount: " + guess);
             System.out.println("Point modifier: +" + pointAdd);
-            System.out.println("Point multiplier: x" + pointMulti);
+            System.out.println("Point multiplier: x" + pointMulti + "\n");
         }
         else {
             System.out.println("----------------------");
@@ -48,27 +52,46 @@ public class Guess {
             System.out.println("Number length: 1");
             System.out.println("Guess amount: 10");
             System.out.println("Point modifier: +0");
-            System.out.println("Point multiplier: x1");
+            System.out.println("Point multiplier: x1 \n");
         }
     }
-    public boolean playGame() {
+    public void playGame() {
         for (int guessRound=guess;guessRound>0;guessRound--) {
             String maxNum = "";
             for (int i = 1; 1 <= length; i++) {
                 maxNum += 9;
             }
-            System.out.print("Pick a number between 0 and " + maxNum + "!");
+            System.out.print("Pick a number between 0 and " + maxNum + ": ");
             int userGuess = input.nextInt();
             if (userGuess<randomNum) {
                 System.out.println("Too low!");
+                guess--;
             }
             if (userGuess>randomNum) {
                 System.out.println("Too high!");
+                guess--;
             }
             else {
-                System.out.print("Good job! You guessed the number in " + Math.abs(guessRound-guess) + " tries!");
-                return true;
+                System.out.println("Good job! You guessed the number in " + Math.abs(guessRound-guess) + " tries!");
+                score+=1+pointAdd;
             }
+        }
+    }
+
+    public int getScore() {
+        return score*pointMulti;
+    }
+
+    public int getGuess() {
+        return guess;
+    }
+
+    public boolean playAgain() {
+        System.out.print("Would you like to play again? Type \"Yes\" if so: ");
+        String answer = input.nextLine();
+        if (answer.equalsIgnoreCase("yes")) {
+            playGame();
+            return true;
         }
         return false;
     }
