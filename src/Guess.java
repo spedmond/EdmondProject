@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Guess {
     private int randomNum;
     private int score = 0;
-    private int length;
+    private int length = 1;
     private int guess;
     private int pointAdd;
     private int pointMulti;
@@ -58,21 +58,21 @@ public class Guess {
     public void playGame() {
         for (int guessRound=guess;guessRound>0;guessRound--) {
             String maxNum = "";
-            for (int i = 1; 1 <= length; i++) {
+            for (int i = 1; i <= length; i++) {
                 maxNum += 9;
             }
             System.out.print("Pick a number between 0 and " + maxNum + ": ");
             int userGuess = input.nextInt();
             if (userGuess<randomNum) {
-                System.out.println("Too low!");
-                guess--;
+                guessRound--;
+                System.out.println("Too low! You have " + guessRound + " attempt(s) left.");
             }
             if (userGuess>randomNum) {
-                System.out.println("Too high!");
-                guess--;
+                guessRound--;
+                System.out.println("Too high! You have " + guessRound + " attempt(s) left.");
             }
             else {
-                System.out.println("Good job! You guessed the number in " + Math.abs(guessRound-guess) + " tries!");
+                System.out.println("Good job! You guessed the number in " + Math.abs((guessRound-1)-guess) + " attempt(s)!");
                 score+=1+pointAdd;
             }
         }

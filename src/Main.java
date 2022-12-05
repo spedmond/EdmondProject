@@ -3,19 +3,14 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+        int highestScore;
+        boolean playAgain = true;
+        boolean isHardMode = false;
 
         System.out.println("--------------------");
         System.out.println("| GUESS THE NUMBER |");
         System.out.println("--------------------");
-        System.out.print("Please enter your name: ");
-        String name = input.nextLine();
-        int highestScore;
-        int pointAdd;
-        int pointMulti;
-        boolean playAgain = true;
-        boolean isHardMode = false;
 
-        System.out.println("Hello, " + name + "!");
         System.out.print("Would you like to play on HARD mode? Type \"Yes\" if so, otherwise press enter: ");
         String diff = input.nextLine();
         if (diff.toLowerCase().equals("yes")) {
@@ -27,7 +22,7 @@ public class Main {
                 guess = input.nextInt();
             }
 
-            System.out.print("Choose the length of the random number (Min. 2, Max. 7; any length over 3 will increase your score multiplier): ");
+            System.out.print("Choose the length of the random number (Min. 2, Max. 7; every additional number will increase your score multiplier by 1): ");
             int length = input.nextInt();
             while (length<2||length>7) {
                 System.out.print("Error: Length must be between 2 and 7. Please reenter length: ");
@@ -52,5 +47,7 @@ public class Main {
                 playAgain = game.playAgain();
             }
         }
+        Guess guesser = new Guess();
+        guesser.playGame();
     }
 }
