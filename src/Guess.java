@@ -7,6 +7,7 @@ public class Guess {
     private int guess;
     private int pointAdd;
     private int pointMulti;
+    private int guessRound;
 
     Scanner input = new Scanner(System.in);
 
@@ -56,11 +57,12 @@ public class Guess {
         }
     }
     public void playGame() {
-        for (int guessRound=guess;guessRound>0;guessRound--) {
-            String maxNum = "";
-            for (int i = 1; i <= length; i++) {
-                maxNum += 9;
-            }
+        String maxNum = "";
+        guessRound = guess;
+        for (int i = 1; i <= length; i++) {
+            maxNum += 9;
+        }
+        while (guessRound>0) {
             System.out.print("Pick a number between 0 and " + maxNum + ": ");
             int userGuess = input.nextInt();
             if (userGuess<randomNum) {
@@ -76,6 +78,7 @@ public class Guess {
                 score+=1+pointAdd;
             }
         }
+
     }
 
     public int getScore() {
