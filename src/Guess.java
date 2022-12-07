@@ -6,9 +6,10 @@ public class Guess {
     private int length;
     private int guess;
     private int score;
-    private int timesPlayed = 0;
+    private int timesPlayed;
     private int pointAdd;
     private int pointMulti;
+    boolean another = true;
 
     Scanner input = new Scanner(System.in);
 
@@ -99,11 +100,16 @@ public class Guess {
             System.out.println("The correct number was: " + randomNum);
             score = (timesPlayed*(1+pointAdd))*pointMulti;
             System.out.println("Score: " + score);
+            score = 0;
         }
     }
 
     public void finish() {
         System.out.println("Congratulations! You beat NUMBER GUESSER " + timesPlayed + " time(s)!");
         System.out.println("Final Score: " + score);
+    }
+
+    public void printNum() {
+        System.out.println(randomNum);
     }
 }

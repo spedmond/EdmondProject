@@ -33,16 +33,15 @@ public class Main {
             Guess game = new Guess(length, guess);
             game.printSettings(isHardMode);
             System.out.println();
+            game.printNum(); //DELETE
             game.playGame();
-            System.out.println();
-            while (another) {
+            while (another=true) {
                 System.out.print("Would you like to play again? Type \"Yes\" if so: ");
                 String playAgain = input.nextLine();
                 if (playAgain.equalsIgnoreCase("yes")) {
                     game.setRandomNum();
                     System.out.println();
                     game.playGame();
-                    System.out.println();
                 }
                 else {
                     another = false;
@@ -56,9 +55,8 @@ public class Main {
             game.printSettings(isHardMode);
             System.out.println();
             game.playGame();
-            System.out.println();
-            while (another) {
-                System.out.print("Would you like to play again? Type \"Yes\" if so: ");
+            while (another=true) {
+                System.out.print("\nWould you like to play again? Type \"Yes\" if so: ");
                 String playAgain = input.nextLine();
                 if (playAgain.equalsIgnoreCase("yes")) {
                     game.setRandomNum();
