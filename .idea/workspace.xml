@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa52539d-40cd-4549-b80a-db5cab367d81" name="Changes" comment="removed">
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="fa52539d-40cd-4549-b80a-db5cab367d81" name="Changes" comment="renamed var" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -202,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670394139062</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="renamed var">
+      <created>1670394341000</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1670394341000</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -229,6 +234,7 @@
     <MESSAGE value="removed getters" />
     <MESSAGE value="fix" />
     <MESSAGE value="removed" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed" />
+    <MESSAGE value="renamed var" />
+    <option name="LAST_COMMIT_MESSAGE" value="renamed var" />
   </component>
 </project>
