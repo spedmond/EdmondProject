@@ -16,10 +16,10 @@ public class Main {
         if (diff.equalsIgnoreCase("yes")) {
             isHardMode = true;
             System.out.print("Choose number of guesses (Min. 1, Max. 9; the fewer guesses you have, the more points you'll gain per number guessed correctly): ");
-            int guess = input.nextInt();
-            while (guess <= 0 || guess > 9) {
+            int guessNumber = input.nextInt();
+            while (guessNumber <= 0 || guessNumber > 9) {
                 System.out.print("Error: Number of guesses must be between 1 and 9. Please reenter guesses: ");
-                guess = input.nextInt();
+                guessNumber = input.nextInt();
             }
 
             System.out.print("Choose the length of the random number (Min. 2, Max. 7; every additional number will increase your score multiplier by 1): ");
@@ -29,21 +29,16 @@ public class Main {
                 length = input.nextInt();
             }
 
-            Guess game = new Guess(length, guess);
+            Guess game = new Guess(length,guessNumber);
             game.printSettings(isHardMode);
             System.out.println();
-            game.printNum();
             game.playGame();
-            System.out.println();
-            game.finish();
         }
         else {
             Guess game = new Guess();
             game.printSettings(isHardMode);
             System.out.println();
             game.playGame();
-            System.out.println();
-            game.finish();
         }
     }
 }

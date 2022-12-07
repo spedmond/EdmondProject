@@ -4,7 +4,7 @@ public class Guess {
     private boolean isHardMode;
     private int randomNum;
     private int length;
-    private int guess;
+    private int guessNum;
     private int score;
     private int pointAdd;
     private int pointMulti;
@@ -14,13 +14,13 @@ public class Guess {
     public Guess() {
         randomNum = (int)(Math.random()*10);
         length = 1;
-        guess = 10;
+        guessNum = 10;
         pointAdd = 0;
         pointMulti = 1;
         isHardMode = false;
     }
 
-    public Guess(int length,int guess) {
+    public Guess(int length,int guessNum) {
         String tempFull = "";
         for (int i=1;i<=length;i++) {
             int tempDigit = (int)(Math.random()*10);
@@ -28,8 +28,8 @@ public class Guess {
         }
         randomNum = Integer.parseInt(tempFull);
         this.length = length;
-        this.guess = guess;
-        pointAdd = 10-guess;
+        this.guessNum = guessNum;
+        pointAdd = 10-guessNum;
         pointMulti = 1 + Math.abs(1-length);
         isHardMode = true;
     }
@@ -53,7 +53,7 @@ public class Guess {
     }
 
     public String toString() {
-        return "Number length: " + length + "\nGuess amount: " + guess + "\nPoint modifier: +" + pointAdd + "\nPoint multiplier: x" + pointMulti;
+        return "Number length: " + length + "\nGuess amount: " + guessNum + "\nPoint modifier: +" + pointAdd + "\nPoint multiplier: x" + pointMulti;
     }
 
     public void printSettings(boolean hardMode) {
@@ -77,16 +77,16 @@ public class Guess {
         for (int i = 1; i <= length; i++) {
             maxNum += 9;
         }
-        while (guessesUsed<guess && !guessed) {
+        while (guessesUsed<guessNum && !guessed) {
             System.out.print("Pick a number between 0 and " + maxNum + ": ");
             int userGuess = input.nextInt();
             if (userGuess<randomNum) {
                 guessesUsed++;
-                System.out.println("Too low! You have " + (guess-guessesUsed) + " attempt(s) left.");
+                System.out.println("Too low! You have " + (guessNum-guessesUsed) + " attempt(s) left.");
             }
             if (userGuess>randomNum) {
                 guessesUsed++;
-                System.out.println("Too high! You have " + (guess-guessesUsed) + " attempt(s) left.");
+                System.out.println("Too high! You have " + (guessNum-guessesUsed) + " attempt(s) left.");
             }
             else if (userGuess==randomNum) {
                 guessesUsed++;
