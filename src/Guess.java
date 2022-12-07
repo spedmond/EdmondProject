@@ -117,6 +117,6 @@ public class Guess {
 
     public void finish() {
         System.out.println("Congratulations! You beat NUMBER GUESSER " + getScore() + " time(s)!");
-        System.out.println("Score: " + getScore());
+        System.out.println("Score: " + getModifiedScore());
     }
 }
