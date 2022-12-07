@@ -42,6 +42,7 @@ public class Main {
                     game.setRandomNum();
                     System.out.println();
                     game.playGame();
+                    System.out.println();
                 }
                 else {
                     another = false;
