@@ -4,7 +4,6 @@ public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         boolean isHardMode = false;
-        boolean another = true;
 
         System.out.println("--------------------");
         System.out.println("| GUESS THE NUMBER |");
@@ -33,20 +32,8 @@ public class Main {
             Guess game = new Guess(length, guess);
             game.printSettings(isHardMode);
             System.out.println();
-            game.printNum(); //DELETE
+            game.printNum();
             game.playGame();
-            while (another=true) {
-                System.out.print("Would you like to play again? Type \"Yes\" if so: ");
-                String playAgain = input.nextLine();
-                if (playAgain.equalsIgnoreCase("yes")) {
-                    game.setRandomNum();
-                    System.out.println();
-                    game.playGame();
-                }
-                else {
-                    another = false;
-                }
-            }
             System.out.println();
             game.finish();
         }
@@ -55,18 +42,6 @@ public class Main {
             game.printSettings(isHardMode);
             System.out.println();
             game.playGame();
-            while (another=true) {
-                System.out.print("\nWould you like to play again? Type \"Yes\" if so: ");
-                String playAgain = input.nextLine();
-                if (playAgain.equalsIgnoreCase("yes")) {
-                    game.setRandomNum();
-                    System.out.println();
-                    game.playGame();
-                }
-                else {
-                    another = false;
-                }
-            }
             System.out.println();
             game.finish();
         }

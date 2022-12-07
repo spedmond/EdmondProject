@@ -6,10 +6,8 @@ public class Guess {
     private int length;
     private int guess;
     private int score;
-    private int timesPlayed;
     private int pointAdd;
     private int pointMulti;
-    boolean another = true;
 
     Scanner input = new Scanner(System.in);
 
@@ -34,6 +32,10 @@ public class Guess {
         pointAdd = 10-guess;
         pointMulti = 1 + Math.abs(1-length);
         isHardMode = true;
+    }
+
+    public int getRandomNum() {
+        return randomNum;
     }
 
     public void setRandomNum() {
@@ -89,27 +91,16 @@ public class Guess {
             else if (userGuess==randomNum) {
                 guessesUsed++;
                 guessed = true;
-                timesPlayed++;
-                score = (timesPlayed*(1+pointAdd))*pointMulti;
+                score = (1+pointAdd)*pointMulti;
                 System.out.println("Good job! You guessed the number in " + guessesUsed + " attempt(s)!");
                 System.out.println("Score: " + score);
             }
         }
         if (!guessed) {
             System.out.println("You lost!");
-            System.out.println("The correct number was: " + randomNum);
-            score = (timesPlayed*(1+pointAdd))*pointMulti;
+            System.out.println("The correct number was: " + getRandomNum());
+            score = (1+pointAdd)*pointMulti;
             System.out.println("Score: " + score);
-            score = 0;
         }
-    }
-
-    public void finish() {
-        System.out.println("Congratulations! You beat NUMBER GUESSER " + timesPlayed + " time(s)!");
-        System.out.println("Final Score: " + score);
-    }
-
-    public void printNum() {
-        System.out.println(randomNum);
     }
 }
