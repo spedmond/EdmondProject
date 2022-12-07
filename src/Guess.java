@@ -62,7 +62,7 @@ public class Guess {
     }
 
     public String toString() {
-        return "The correct number was: " + randomNum + "\nScore: " + getModifiedScore();
+        return "Number length: " + length + "\nGuess amount: " + guess + "\nPoint modifier: +" + pointAdd + "\nPoint multiplier: x" + pointMulti;
     }
 
     public void printSettings(boolean hardMode) {
@@ -70,19 +70,13 @@ public class Guess {
             System.out.println("----------------------");
             System.out.println("| HARD MODE SETTINGS |");
             System.out.println("----------------------");
-            System.out.println("Number length: " + length);
-            System.out.println("Guess amount: " + guess);
-            System.out.println("Point modifier: +" + pointAdd);
-            System.out.println("Point multiplier: x" + pointMulti + "\n");
+            System.out.println(toString());
         }
         else {
             System.out.println("----------------------");
             System.out.println("| EASY MODE SETTINGS |");
             System.out.println("----------------------");
-            System.out.println("Number length: 1");
-            System.out.println("Guess amount: 10");
-            System.out.println("Point modifier: +0");
-            System.out.println("Point multiplier: x1 \n");
+            System.out.println(toString());
         }
     }
     public void playGame() {
@@ -112,7 +106,8 @@ public class Guess {
         }
         if (!guessed) {
             System.out.println("You lost!");
-            System.out.println(toString());
+            System.out.println("The correct number was: " + randomNum);
+            System.out.println("Score: " + getModifiedScore());
         }
     }
 

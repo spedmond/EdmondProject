@@ -12,6 +12,8 @@ public class Main {
 
         System.out.print("Would you like to play on HARD mode? Type \"Yes\" if so, otherwise press enter: ");
         String diff = input.nextLine();
+        System.out.println();
+
         if (diff.equalsIgnoreCase("yes")) {
             isHardMode = true;
             System.out.print("Choose number of guesses (Min. 1, Max. 9; the fewer guesses you have, the more points you'll gain per number guessed correctly): ");
@@ -30,6 +32,7 @@ public class Main {
 
             Guess game = new Guess(length, guess);
             game.printSettings(isHardMode);
+            System.out.println();
             game.playGame();
             System.out.println();
             while (another) {
@@ -50,6 +53,7 @@ public class Main {
         else {
             Guess game = new Guess();
             game.printSettings(isHardMode);
+            System.out.println();
             game.playGame();
             System.out.println();
             while (another) {
