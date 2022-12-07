@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa52539d-40cd-4549-b80a-db5cab367d81" name="Changes" comment="Changed toString">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Guess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Guess.java" afterDir="false" />
-    </list>
+    <list default="true" id="fa52539d-40cd-4549-b80a-db5cab367d81" name="Changes" comment="changed methods" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -168,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670381231512</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="changed methods">
+      <created>1670382710995</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1670382710995</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -191,6 +195,7 @@
     <MESSAGE value="fixed hard" />
     <MESSAGE value="tostring" />
     <MESSAGE value="Changed toString" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed toString" />
+    <MESSAGE value="changed methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed methods" />
   </component>
 </project>

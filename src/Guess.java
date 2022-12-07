@@ -5,7 +5,6 @@ public class Guess {
     private int randomNum;
     private int length;
     private int guess;
-    private int guessesUsed = 0;
     private int score;
     private int timesPlayed = 0;
     private int pointAdd;
@@ -36,14 +35,6 @@ public class Guess {
         isHardMode = true;
     }
 
-    public int getScore() {
-        return score;
-    }
-
-    public int getTimesPlayed() {
-        return timesPlayed;
-    }
-
     public void setRandomNum() {
         if (isHardMode) {
             String tempFull = "";
@@ -51,6 +42,7 @@ public class Guess {
                 int tempDigit = (int) (Math.random() * 10);
                 tempFull += tempDigit;
             }
+            randomNum = Integer.parseInt(tempFull);
         }
         else {
             randomNum = (int)(Math.random()*10);
@@ -77,7 +69,7 @@ public class Guess {
     }
     public void playGame() {
         boolean guessed = false;
-        guessesUsed = 0;
+        int guessesUsed = 0;
         String maxNum = "";
         for (int i = 1; i <= length; i++) {
             maxNum += 9;
@@ -99,19 +91,19 @@ public class Guess {
                 timesPlayed++;
                 score = (timesPlayed*(1+pointAdd))*pointMulti;
                 System.out.println("Good job! You guessed the number in " + guessesUsed + " attempt(s)!");
-                System.out.println("Score: " + getScore());
+                System.out.println("Score: " + score);
             }
         }
         if (!guessed) {
             System.out.println("You lost!");
             System.out.println("The correct number was: " + randomNum);
             score = (timesPlayed*(1+pointAdd))*pointMulti;
-            System.out.println("Score: " + getScore());
+            System.out.println("Score: " + score);
         }
     }
 
     public void finish() {
-        System.out.println("Congratulations! You beat NUMBER GUESSER " + getTimesPlayed() + " time(s)!");
-        System.out.println("Final Score: " + getScore());
+        System.out.println("Congratulations! You beat NUMBER GUESSER " + timesPlayed + " time(s)!");
+        System.out.println("Final Score: " + score);
     }
 }
