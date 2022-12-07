@@ -62,7 +62,7 @@ public class Guess {
     }
 
     public String toString() {
-        return "" + randomNum;
+        return "The correct number was: " + randomNum + "\nScore: " + getModifiedScore();
     }
 
     public void printSettings(boolean hardMode) {
@@ -111,7 +111,8 @@ public class Guess {
             }
         }
         if (!guessed) {
-            System.out.println("You lost! Score: " + getModifiedScore());
+            System.out.println("You lost!");
+            System.out.println(toString());
         }
     }
 

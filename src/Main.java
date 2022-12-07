@@ -31,6 +31,7 @@ public class Main {
             Guess game = new Guess(length, guess);
             game.printSettings(isHardMode);
             game.playGame();
+            System.out.println();
             while (another) {
                 System.out.print("Would you like to play again? Type \"Yes\" if so: ");
                 String playAgain = input.nextLine();
@@ -50,6 +51,7 @@ public class Main {
             Guess game = new Guess();
             game.printSettings(isHardMode);
             game.playGame();
+            System.out.println();
             while (another) {
                 System.out.print("Would you like to play again? Type \"Yes\" if so: ");
                 String playAgain = input.nextLine();
