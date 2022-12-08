@@ -73,6 +73,7 @@ public class Guess {
     public void playGame() {
         boolean guessed = false;
         int guessesUsed = 0;
+        score = 0;
         String maxNum = "";
         for (int i = 1; i <= length; i++) {
             maxNum += 9;

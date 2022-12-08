@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa52539d-40cd-4549-b80a-db5cab367d81" name="Changes" comment="renamed var" />
+    <list default="true" id="fa52539d-40cd-4549-b80a-db5cab367d81" name="Changes" comment="work">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Guess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Guess.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -123,91 +126,7 @@
       <option name="project" value="LOCAL" />
       <updated>1670261049587</updated>
     </task>
-    <task id="LOCAL-00010" summary="Merge remote-tracking branch 'origin/master'">
-      <created>1670375534180</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1670375534180</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Merge remote-tracking branch 'origin/master'">
-      <created>1670375773433</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1670375773433</updated>
-    </task>
-    <task id="LOCAL-00012" summary="fixed hard">
-      <created>1670376147823</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1670376147823</updated>
-    </task>
-    <task id="LOCAL-00013" summary="fixed hard">
-      <created>1670376556358</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1670376556358</updated>
-    </task>
-    <task id="LOCAL-00014" summary="tostring">
-      <created>1670380950682</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1670380950682</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Changed toString">
-      <created>1670381231512</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1670381231512</updated>
-    </task>
-    <task id="LOCAL-00016" summary="changed methods">
-      <created>1670382710995</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1670382710995</updated>
-    </task>
-    <task id="LOCAL-00017" summary="removed getters">
-      <created>1670383017093</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1670383017093</updated>
-    </task>
-    <task id="LOCAL-00018" summary="removed getters">
-      <created>1670383110706</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1670383110706</updated>
-    </task>
-    <task id="LOCAL-00019" summary="fix">
-      <created>1670392888420</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1670392888420</updated>
-    </task>
-    <task id="LOCAL-00020" summary="removed">
-      <created>1670394139062</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1670394139062</updated>
-    </task>
-    <task id="LOCAL-00021" summary="renamed var">
-      <created>1670394341000</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1670394341000</updated>
-    </task>
-    <option name="localTasksCounter" value="22" />
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -227,14 +146,6 @@
     <MESSAGE value="awdawdauwytdwauydh" />
     <MESSAGE value="fixed loop" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master'" />
-    <MESSAGE value="fixed hard" />
-    <MESSAGE value="tostring" />
-    <MESSAGE value="Changed toString" />
-    <MESSAGE value="changed methods" />
-    <MESSAGE value="removed getters" />
-    <MESSAGE value="fix" />
-    <MESSAGE value="removed" />
-    <MESSAGE value="renamed var" />
-    <option name="LAST_COMMIT_MESSAGE" value="renamed var" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master'" />
   </component>
 </project>
