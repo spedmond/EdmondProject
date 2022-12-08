@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa52539d-40cd-4549-b80a-db5cab367d81" name="Changes" comment="work">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="fa52539d-40cd-4549-b80a-db5cab367d81" name="Changes" comment="score">
       <change beforePath="$PROJECT_DIR$/src/Guess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Guess.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -126,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670261049587</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="score">
+      <created>1670518468269</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1670518468269</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -146,6 +152,7 @@
     <MESSAGE value="awdawdauwytdwauydh" />
     <MESSAGE value="fixed loop" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master'" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master'" />
+    <MESSAGE value="score" />
+    <option name="LAST_COMMIT_MESSAGE" value="score" />
   </component>
 </project>

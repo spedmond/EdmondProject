@@ -100,7 +100,6 @@ public class Guess {
         if (!guessed) {
             System.out.println("You lost!");
             System.out.println("The correct number was: " + getRandomNum());
-            score = (1+pointAdd)*pointMulti;
             System.out.println("Score: " + score);
         }
     }
